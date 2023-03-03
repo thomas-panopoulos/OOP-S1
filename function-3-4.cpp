@@ -4,19 +4,19 @@ using namespace std;
 void print_pass_fail(char grade) {
     switch(grade) {
         case 'A':
-            cout << "pass" << endl;
+            cout << "Pass" << endl;
             break;
         case 'B':
-            cout << "pass" << endl;
+            cout << "Pass" << endl;
             break;
         case 'C':
-            cout << "pass" << endl;
+            cout << "Pass" << endl;
             break;
         case 'D':
-            cout << "fail" << endl;
+            cout << "Fail" << endl;
             break;
         case 'E':
-            cout << "fail" << endl;
+            cout << "Fail" << endl;
             break;
     }
 }
