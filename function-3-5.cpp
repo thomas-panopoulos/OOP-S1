@@ -9,5 +9,5 @@ double sum_even(double array[], int len) {
             sum += array[i];
         }
     }
-    cout << sum << endl;
+    return sum;
 }
