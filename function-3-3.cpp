@@ -1,5 +1,19 @@
-//seudo code
-// iterate through original array, then append all unique elements to new array (maybe use vector as set length will not work here)
-// then, find total number of each unique element in original array.
-// weight = (occurences/total-original-length)
-// return weighted average by sum of (unique element * weight)
+#include <iostream>
+#include <map>
+#include <algorithm>
+using namespace std;
+double weighted_average(int array[], int len) {
+    map<int, int> weight;
+    double weightedAvg = {0};
+    for (int i = 0; i < len; i++) {
+        if (!weight[array[i]]) {
+            weight[array[i]] = 1;
+        }else {
+            weight[array[i]] += 1;
+        }
+    }
+    for (auto item : weight) {
+        weightedAvg += item.first * item.second * item.second;
+    }
+    return weightedAvg/len;
+}
