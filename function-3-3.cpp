@@ -2,6 +2,7 @@
 #include <map>
 #include <algorithm>
 using namespace std;
+
 double weighted_average(int array[], int len) {
     map<int, int> weight;
     double weightedAvg = {0};

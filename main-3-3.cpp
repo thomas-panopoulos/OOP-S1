@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 extern double weighted_average(int[], int);
