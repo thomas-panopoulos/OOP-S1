@@ -1,5 +1,5 @@
 #include <string>
-using namepsace std;
+using namespace std;
 extern void print_binary_string(string);
 
 int main() {

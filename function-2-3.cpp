@@ -1,6 +1,6 @@
 #include <numeric>
 #include <algorithm>
-#include <string>
+#include <cstring>
 using namespace std;
 
 bool is_palindrome(int array[], int len) {
