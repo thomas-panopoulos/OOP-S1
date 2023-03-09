@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 int is_identity(int array[10][10]) {
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
             cout << array[i][j] << ' ';
         }
         cout << endl;
