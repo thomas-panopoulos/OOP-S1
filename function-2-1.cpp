@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void print_binary_string(string decimal) {
+void print_binary_str(string decimal) {
     int num{};
     string solution{};
     num = stoi(decimal);
