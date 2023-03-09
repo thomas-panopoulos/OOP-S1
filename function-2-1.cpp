@@ -16,5 +16,5 @@ void print_binary_string(string decimal) {
         }
         num >>= 1;
     }
-    cout << to_string(solution) << endl;
+    cout << solution << endl;
 }
