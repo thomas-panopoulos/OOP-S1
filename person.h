@@ -1,14 +1,11 @@
 #include <string>
 #include <iostream>
-#ifndef PERSON
-#define PERSON
+#ifndef PERSON_H
+#define PERSON_H
 
 struct Person {
     std::string name;
     int age;
-    /*void print() {
-        std::cout << "name:" name << " age:" age << std::endl;
-    }*/
 };
 
 struct PersonList {
