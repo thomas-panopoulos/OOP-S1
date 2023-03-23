@@ -6,7 +6,7 @@ PersonList createPersonList(int n) {
     Person* arr = new Person[n];
     for (int i = 0; i < n; i++) {
         Person temp;
-        temp.name = "John Doe", temp.age = 0;
+        temp.name = "Jane Doe", temp.age = 1;
         arr[i].name = temp.name;
         arr[i].age = temp.age;
     }
