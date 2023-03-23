@@ -2,6 +2,14 @@
 #include <iostream>
 using namespace std;
 
+
+// new array of people, fill with old array values, create new personlist and then assign to new memory
+PersonList shallowCopyPersonList(PersonList p1) {
+    PersonList b;
+    b = p1;
+    return b;
+}
+
 PersonList createPersonList(int n) {
     Person* arr = new Person[n];
     for (int i = 0; i < n; i++) {
