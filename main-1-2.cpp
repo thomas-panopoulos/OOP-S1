@@ -3,7 +3,7 @@
 #include "Musician.h"
 int main() {
 // create an empty orchestra
-Orchestra orchestra(5);
+Orchestra orchestra(3);
 // create some musicians
 Musician m1("violin", 5);
 Musician m2("viola", 3);
@@ -52,13 +52,13 @@ std::cout << "The orchestra has a violinist" << std::endl;
 std::cout << "The orchestra does not have a violinist" << std::endl;
 }
 // get the list of musicians in the orchestra
-/*
+
 Musician *members = orchestra.get_members();
 // print the details of each musician
 for (int i = 0; i < orchestra.get_current_number_of_members(); i++) {
 std::cout << "Musician " << i+1 << " plays " << members[i].get_instrument()
 << " and has " << members[i].get_experience() << " years of experience" <<
-std::endl;*/
+std::endl;
 }
 return 0;
 }

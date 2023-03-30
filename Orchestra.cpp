@@ -8,6 +8,7 @@ Orchestra::Orchestra() {
 
 Orchestra::Orchestra(int len) {
     size = len;
+    musicians = new Musician[len];
 }
 
 int Orchestra::get_current_number_of_members() {
@@ -30,6 +31,7 @@ Musician* Orchestra::get_members() {
 bool Orchestra::add_musician(Musician new_musician) {
     if (current_amount < size) {
         musicians[current_amount] = new_musician;
+        std::cout << current_amount << std::endl;
         current_amount++;
         return true;
     }

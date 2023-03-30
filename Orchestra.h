@@ -2,12 +2,11 @@
 #define ORCHESTRA_H
 #include "Musician.h"
 #include <string>
-#include <iostream>
 
 class Orchestra {
 private:
-    int size;
-    Musician* musicians = new Musician[size];
+    int size{0};
+    Musician* musicians;
     int current_amount{0};
 
 public:
