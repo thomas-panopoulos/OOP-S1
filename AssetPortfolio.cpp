@@ -16,7 +16,7 @@ int AssetPortfolio::get_num_assets() {
 }
 
 bool AssetPortfolio::has_asset(std::string product) {
-    for (int i = 0; i < curr_assets+1; i++) {
+    for (int i = 0; i < size; i++) {
         if (assets[i].get_product_type() == product) {
             return true;
         }
