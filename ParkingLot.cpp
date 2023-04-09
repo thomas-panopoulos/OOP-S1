@@ -21,7 +21,7 @@ int ParkingLot::getCount() {
     return currCap;
 }
 
-ParkingLot::parkVehicle(Vehicle* vehicle) {
+void ParkingLot::parkVehicle(Vehicle* vehicle) {
     if (currCap < maxCap) {
         for (int i = 0; i < maxCap; i++) {
             if (free[i] == true) {
@@ -39,7 +39,7 @@ ParkingLot::parkVehicle(Vehicle* vehicle) {
 
 
 
-ParkingLot::unparkVehicle(int ID) {
+void ParkingLot::unparkVehicle(int ID) {
     for (int i = 0; i < currCap; i++) {
         if (vehicles[i].getID() == ID){
             free[i] = true; 

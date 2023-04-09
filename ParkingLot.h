@@ -12,8 +12,8 @@ public:
 ParkingLot();
 ParkingLot(int maxCap);
 int getCount();
-parkVehicle(Vehicle* vehicle);
-unparkVehicle(int ID);
+void parkVehicle(Vehicle* vehicle);
+void unparkVehicle(int ID);
 int countOverstayingVehicles(int maxParkingDuration);
  
 };
