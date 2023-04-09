@@ -61,5 +61,5 @@ int ParkingLot::countOverstayingVehicles(int max) {
             total += 1;
         }
     }
-    return 0;
+    return total;
 }
