@@ -40,13 +40,19 @@ void ParkingLot::parkVehicle(Vehicle* vehicle) {
 
 
 void ParkingLot::unparkVehicle(int ID) {
+    int x;
     for (int i = 0; i < currCap; i++) {
         if (vehicles[i].getID() == ID){
+
+            x = 1;
             free[i] = true; 
             currCap--;
         }
     }
-    std::cout << "Vehicle not in the lot" << std::endl;
+    if (x != 0) {
+        std::cout << "Vehicle not in the lot" << std::endl;
+    }
+    
 }
 
 int ParkingLot::countOverstayingVehicles(int max) {
