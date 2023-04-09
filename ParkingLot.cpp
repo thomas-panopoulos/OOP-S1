@@ -43,13 +43,12 @@ void ParkingLot::unparkVehicle(int ID) {
     int x;
     for (int i = 0; i < currCap; i++) {
         if (vehicles[i].getID() == ID){
-
             x = 1;
             free[i] = true; 
             currCap--;
         }
     }
-    if (x != 0) {
+    if (x == 0) {
         std::cout << "Vehicle not in the lot" << std::endl;
     }
     
