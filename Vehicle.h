@@ -9,6 +9,7 @@ public:
     Vehicle();
     Vehicle(int ID);
     int getID();
+    int getParkingDuration(int id);
     int getParkingDuration();
     virtual ~Vehicle(){};
 };
