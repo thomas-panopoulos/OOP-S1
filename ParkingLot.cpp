@@ -46,6 +46,7 @@ void ParkingLot::unparkVehicle(int ID) {
             currCap--;
         }
     }
+    std::cout << "Vehicle not in the lot" << std::endl;
 }
 
 int ParkingLot::countOverstayingVehicles(int max) {
