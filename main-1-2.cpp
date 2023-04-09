@@ -1,5 +1,8 @@
 #include "Vehicle.h"
 #include "ParkingLot.h"
+#include "Car.h"
+#include "Bus.h"
+#include "Motorbike.h"
 #include <iostream>
 #include <string>
 using namespace std;
