@@ -53,6 +53,7 @@ void ParkingLot::unparkVehicle(int ID) {
 if (flag == false) {
     std::cout << "Vehicle not in the lot" << std::endl;
 }
+currCap = c;
 delete[] vehicles;
 Vehicle *vehicles = newArr;
 }
