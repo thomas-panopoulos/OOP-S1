@@ -5,7 +5,7 @@ Bus::Bus() : Vehicle() {};
 
 Bus::Bus(int id) : Vehicle(id) {};
 
-int Bus::getParkingDuration(int id) { 
+int Bus::getParkingDuration() { 
     long int x,y;
     x = this->timeOfEntry;
     y = time(0);

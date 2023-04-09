@@ -5,7 +5,7 @@ class Bus : public Vehicle {
 public:
     Bus();
     Bus(int ID);
-    int getParkingDuration(int ID);
+    int getParkingDuration();
 };
 
 #endif

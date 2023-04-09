@@ -8,7 +8,7 @@ public:
     Car();
     Car(int ID);
     
-    int getParkingDuration(int ID);
+    int getParkingDuration();
 };
 
 #endif

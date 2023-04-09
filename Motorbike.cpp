@@ -5,7 +5,7 @@ Motorbike::Motorbike() : Vehicle() {};
 
 Motorbike::Motorbike(int id) : Vehicle(id) {};
 
-int Motorbike::getParkingDuration(int id) { 
+int Motorbike::getParkingDuration() { 
     long int x,y;
     x = this->timeOfEntry;
     y = time(0);
