@@ -55,6 +55,7 @@ if (flag == false) {
 }
 delete[] vehicles;
 Vehicle *vehicles = newArr;
+}
 /*
 void ParkingLot::unparkVehicle(int ID) {
     int x;
