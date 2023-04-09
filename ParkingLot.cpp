@@ -37,8 +37,25 @@ void ParkingLot::parkVehicle(Vehicle* vehicle) {
     }
 }
 
-
-
+void ParkingLot::unparkVehicle(int ID) {
+    int c(0);
+    bool flag = false;
+    Vehicle *newArr = new Vehicle[maxCap];
+    for (int i = 0; i < currCap; i++) {
+        if (vehicles[i].getID() == ID) {
+            flag = true;
+        }
+        else {
+            newArr[c] = vehicles[i];
+            c++;
+        }
+}
+if (flag == false) {
+    std::cout << "Vehicle not in the lot" << std::endl;
+}
+delete[] vehicles;
+Vehicle *vehicles = newArr;
+/*
 void ParkingLot::unparkVehicle(int ID) {
     int x;
     for (int i = 0; i < currCap; i++) {
@@ -52,7 +69,7 @@ void ParkingLot::unparkVehicle(int ID) {
         std::cout << "Vehicle not in the lot" << std::endl;
     }
     
-}
+}*/
 
 int ParkingLot::countOverstayingVehicles(int max) {
     int total{0};
