@@ -13,26 +13,7 @@ public:
     virtual ~Vehicle(){};
 };
 
-class Car : public Vehicle {
-public:
-    Car();
-    Car(int ID);
-    
-    int getParkingDuration(int ID);
-};
 
-class Bus : public Vehicle {
-public:
-    Bus();
-    Bus(int ID);
-    int getParkingDuration(int ID);
-};
 
-class Motorbike : public Vehicle {
-public:
-    Motorbike();
-    Motorbike(int ID);
-    int getParkingDuration(int ID);
-};
 
 #endif
