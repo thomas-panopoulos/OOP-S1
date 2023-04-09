@@ -55,7 +55,7 @@ void ParkingLot::unparkVehicle(int ID) {
 }
 
 int ParkingLot::countOverstayingVehicles(int max) {
-    int total;
+    int total{0};
     for (int i = 0; i < maxCap; i++) {
         if (vehicles[i].getParkingDuration(vehicles[i].getID()) > max) {
             total += 1;
