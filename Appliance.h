@@ -14,8 +14,6 @@ class Appliance {
     bool get_isOn();
     int get_powerRating();
     void set_powerRating(int power);
-    void turnOn();
-    void turnOff();
 };
 
 #endif

@@ -1,7 +1,7 @@
 #include "Appliance.h"
 Appliance::Appliance() {
     isOn = false;
-    powerRating = powerRating;
+    powerRating = 0;
 }
 Appliance::Appliance(int powerRating) {
     isOn = false;
