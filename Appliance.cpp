@@ -1,11 +1,11 @@
 #include "Appliance.h"
 Appliance::Appliance() {
     isOn = false;
-    powerRating = 0;
+    this->powerRating = 0;
 }
 Appliance::Appliance(int powerRating) {
     isOn = false;
-    powerRating = powerRating;
+    this->powerRating = powerRating;
 }
 void Appliance::turnOff() {
     isOn = false;
