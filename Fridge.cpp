@@ -1,6 +1,6 @@
 #include "Fridge.h"
 #include "Appliance.h"
-Fridge::Fridge() : Appliance() {};
+Fridge::Fridge() : Appliance(), volume(0) {};
 
 Fridge::Fridge(int powerRating, double volume) : Appliance(powerRating), volume(volume) {};
 
