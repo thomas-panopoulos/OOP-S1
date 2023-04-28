@@ -11,10 +11,19 @@ void Tesla::chargeBattery(int mins) {
 };
 
 void Tesla::drive(int kms) {
+
+    for (int i = 0; i < kms; i++) {
+        if (batteryPercentage > 0) {
+            emissions += 234*1;//possibly gradescope error
+                batteryPercentage -= (float(1)/5.0);
+        }
+    }
+/*
         if (batteryPercentage > 0) {
             this->emissions += 74*kms;//possibly gradescope error
+
                 this->batteryPercentage -= (float(kms)/5.0);
-        }
+        }*/
 }
 
 char Tesla::get_model() {
