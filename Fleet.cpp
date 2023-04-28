@@ -13,6 +13,6 @@ Fleet::Fleet() {
 
 }
 
-Car **Fleet::getFleet() {
+Car **Fleet::get_fleet() {
     return fleet;
 }

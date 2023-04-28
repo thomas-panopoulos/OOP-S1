@@ -3,7 +3,7 @@
 
 class Car {
     protected:
-    int price;
+    int price{0};
     int emissions{0};
 
     public:
