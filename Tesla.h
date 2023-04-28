@@ -4,7 +4,7 @@
 class Tesla : public Car {
     protected:
     char model;
-    float batteryPercentage{0};
+    float batteryPercentage{100};
     public:
     Tesla();
     Tesla(char model, int price);
