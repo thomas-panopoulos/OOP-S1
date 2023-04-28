@@ -7,7 +7,7 @@ Tesla::Tesla(char model, int price) : Car(price), model(model) {};
 void Tesla::chargeBattery(int mins) {
     for (int i = 0; i < mins; i++) {
         if (batteryPercentage < 100) {
-            this->batteryPercentage += 1*0.5;
+            this->batteryPercentage += 1.0*0.5;
         }
     }
 };
