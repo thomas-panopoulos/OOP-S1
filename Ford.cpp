@@ -7,7 +7,7 @@ Ford::Ford(int badgeNumber, int price) : Car(price), badgeNumber(badgeNumber) {}
 
 void Ford::refuel(int litres) {
     for (int i = 0; i < litres; i++) {
-        if (litresOfFuel < 100) {
+        if (litresOfFuel < 60) {
             litresOfFuel += 1;
         }
     } 
