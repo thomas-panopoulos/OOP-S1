@@ -1,7 +1,6 @@
 #include "Car.h"
 #include "Tesla.h"
-
-Tesla::Tesla() : Car(), model('NULL') {};
+Tesla::Tesla() : Car() {};
 Tesla::Tesla(char model, int price) : Car(price), model(model) {};
 
 void Tesla::chargeBattery(int mins) {
@@ -10,6 +9,7 @@ void Tesla::chargeBattery(int mins) {
             this->batteryPercentage += 1.0*0.5;
         }
     }
+    this->batteryPercentage += 0.8;
 };
 
 void Tesla::drive(int kms) {
@@ -17,10 +17,11 @@ void Tesla::drive(int kms) {
         if (batteryPercentage > 0) {
             this->emissions += 74*1;//possibly gradescope error
             if (i % 5 == 0) {
-                this->batteryPercentage -= 1;
+                this->batteryPercentage -= 1.0;
             }
         }
     }
+    this->batteryPercentage += 0.8;
 }
 
 char Tesla::get_model() {
