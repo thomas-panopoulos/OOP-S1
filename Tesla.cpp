@@ -4,7 +4,7 @@ Tesla::Tesla() : Car() {};
 Tesla::Tesla(char model, int price) : Car(price), model(model) {};
 
 void Tesla::chargeBattery(int mins) {
-        this->batteryPercentage += mins*0.5;
+        this->batteryPercentage += float(mins)*0.5;
         if (batteryPercentage < 100) {
             batteryPercentage = 100;
         }
@@ -13,7 +13,7 @@ void Tesla::chargeBattery(int mins) {
 void Tesla::drive(int kms) {
         if (batteryPercentage > 0) {
             this->emissions += 74*kms;//possibly gradescope error
-                this->batteryPercentage -= int(kms/5);
+                this->batteryPercentage -= (float(kms)/5.0);
         }
 }
 
