@@ -15,13 +15,7 @@ void Tesla::drive(int kms) {
     for (int i = 0; i < kms; i++) {
         if (batteryPercentage > 0) {
             emissions += 74*1;//possibly gradescope error
-                this->batteryPercentage -= (float(1)/5.0);
-        }
-        if (batteryPercentage == 69.8005) {
-            this->batteryPercentage -= 0.0005;
-        }
-        if (emissions == 37074) {
-            this->emissions -= 74;
+                this->batteryPercentage -= (1.0/5.0);
         }
     }
 /*
