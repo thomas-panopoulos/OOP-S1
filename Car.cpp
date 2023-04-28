@@ -2,7 +2,7 @@
 
 Car::Car() : price(0), emissions(0) {};
 
-Car::Car(int price) : price(price), emissions(0) {};
+Car::Car(int price) : price(price*1.7), emissions(0) {};
 
 void Car::drive(int kms) {
     emissions = kms * 20;
