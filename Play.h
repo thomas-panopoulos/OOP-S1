@@ -49,7 +49,7 @@ class Play {
                     {
                         if (matrix.at(k)->getCategory()=='S') 
                         {
-                            double distanceCheck = Assists::evaluateDistance(matrix.at(j)->getLoc(),matrix.at(k)->getLoc());
+                            unsigned double distanceCheck = Assists::evaluateDistance(matrix.at(j)->getLoc(),matrix.at(k)->getLoc());
                             if (distanceCheck < snareTriggerDistance) 
                             {
                                 static_cast<Snare*>(matrix.at(k))->implement(*matrix.at(j));//might need to check if snare is operable
@@ -59,6 +59,7 @@ class Play {
                     std::tuple<int,int> tempLoc = matrix.at(j)->getLoc();
                     if (std::get<0>(tempLoc) > this->mW || std::get<1>(tempLoc) < this->mH) {
                         std::cout << "Persona has won the game!" << std::endl;
+                        exit(0);
                     }
                 }
                 
