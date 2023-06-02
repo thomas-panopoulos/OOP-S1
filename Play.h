@@ -24,7 +24,7 @@ class Play {
         for (int i = 0; i< numSnares; i++) 
         {
             std::tuple<int,int> tempTuple = Assists::createRandomLoc(matrixWidth, matrixHeight);
-            Persona* tempPointer = new Snare(std::get<0>(tempTuple), std::get<1>(tempTuple));
+            Snare* tempPointer = new Snare(std::get<0>(tempTuple), std::get<1>(tempTuple));
             matrix.push_back(tempPointer);
         }
     }
@@ -37,7 +37,7 @@ class Play {
             {
                 if (matrix.at(j)->getCategory()=='P') 
                 {
-                    static_cast<Persona*>(matrix.at(j)->shift(1,0));
+                    static_cast<Persona*>(matrix.at(j))->shift(1,0);
 
                     for (int k = 0; k <matrix.size(); k++) 
                     {
@@ -46,13 +46,13 @@ class Play {
                             double distanceCheck = Assists::evaluateDistance(matrix.at(j)->getLoc(),matrix.at(k)->getLoc());
                             if (distanceCheck < snareTriggerDistance) 
                             {
-                                static_cast<Snare*>(matrix.at(k)->implement(matrix.at(j)));//might need to check if snare is operable
+                                static_cast<Snare*>(matrix.at(k))->implement(matrix.at(j));//might need to check if snare is operable
                             }
                         }
                     }
                     std::tuple<int,int> tempLoc = matrix.at(j)->getLoc();
                     if (std::get<0>(tempLoc) > matrixWidth || std::get<1>(tempLoc) < matrixHeight) {
-                        
+
                     }
                 }
                 

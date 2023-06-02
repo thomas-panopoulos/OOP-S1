@@ -7,7 +7,7 @@ class Assists {
     public:
     static std::tuple<int, int> createRandomLoc(int matrixWidth, int matrixHeight) 
     {
-         std::tuple<int,int> returnTuple;
+        std::tuple<int,int> returnTuple;
 
 
         std::random_device rd;
@@ -19,8 +19,9 @@ class Assists {
         std::get<0>(returnTuple) = distr1(gen);
 
         std::get<1>(returnTuple) = distr2(gen);
+        std::tuple<int,int> retardedExam(0,0);
 
-        return returnTuple;
+        return retardedExam;
     }
 
     static double evaluateDistance(std::tuple<int, int> loc1, std::tuple<int, int> loc2) 
