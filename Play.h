@@ -6,11 +6,14 @@
 #include "Influence.h"
 #include "Snare.h"
 #include "Persona.h"
+#include <iostream>
 class Play {
     private:
     std::vector<Spot*> matrix;
     public:
     std::vector<Spot*>& getMatrix() {return this->matrix;}
+    int mH;
+    int mW;
 
     void initPlay(int numPersonas, int numSnares, int matrixWidth, int matrixHeight) 
     {
@@ -27,6 +30,9 @@ class Play {
             Snare* tempPointer = new Snare(std::get<0>(tempTuple), std::get<1>(tempTuple));
             matrix.push_back(tempPointer);
         }
+
+        mH = matrixHeight;
+        mW = matrixWidth;
     }
 
     void playCycle(int maxCycles, double snareTriggerDistance) 
@@ -51,13 +57,14 @@ class Play {
                         }
                     }
                     std::tuple<int,int> tempLoc = matrix.at(j)->getLoc();
-                    if (std::get<0>(tempLoc) > matrixWidth || std::get<1>(tempLoc) < matrixHeight) {
-
+                    if (std::get<0>(tempLoc) > this->mW || std::get<1>(tempLoc) < this->mH) {
+                        std::cout << "Persona has won the game!" << std::endl;
                     }
                 }
                 
             }
         }
+        std::cout << "Maximum number of cycles reached. Game over." << std::endl;
     }
 };
 
