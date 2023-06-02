@@ -49,7 +49,7 @@ class Play {
                     {
                         if (matrix.at(k)->getCategory()=='S') 
                         {
-                            unsigned double distanceCheck = Assists::evaluateDistance(matrix.at(j)->getLoc(),matrix.at(k)->getLoc());
+                            double distanceCheck = Assists::evaluateDistance(matrix.at(j)->getLoc(),matrix.at(k)->getLoc());
                             if (distanceCheck < snareTriggerDistance) 
                             {
                                 static_cast<Snare*>(matrix.at(k))->implement(*matrix.at(j));//might need to check if snare is operable
